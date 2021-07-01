@@ -13,6 +13,16 @@ export class LivroService {
 
   constructor(private http: HttpClient) { }
 
+  atualizarLivro(livro: Livro): Observable<Livro> {
+    const url = `${this.baseUrl}/livros/${livro.id}`;
+    return this.http.put<Livro>(url, livro);
+  }
+
+  findById(livroId: string): Observable<Livro> {
+    const url = `${this.baseUrl}/livros/${livroId}`;
+    return this.http.get<Livro>(url);
+  }
+
   findAll(categoriaId: string): Observable<Livro[]> {
     const url = `${this.baseUrl}/livros?categoria=${categoriaId}`;
     return this.http.get<Livro[]>(url);

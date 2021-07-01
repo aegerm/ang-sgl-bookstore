@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Categoria } from '../model/categoria.model';
 import { CategoriaService } from '../services/categoria.service';
@@ -17,7 +16,7 @@ export class CategoriaEditComponent implements OnInit {
     descricao: ''
   };
 
-  constructor(private fb: FormBuilder, private service: CategoriaService, private router: Router, private route: ActivatedRoute) { }
+  constructor(private service: CategoriaService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.categoria.id = this.route.snapshot.paramMap.get('id');

@@ -1,1 +1,17 @@
-<p>livro-edit works!</p>
+<div class="content">
+  <h5 class="mb-3 font-weight-500 text-center">Editar Livro</h5>
+  <hr>
+</div>
+
+<div class="div-custom">
+  <form (ngSubmit)="atualizarLivro()">
+    <input [(ngModel)]="livro.autor" type="text" class="form-control mt-2" placeholder="Nome do Autor" name="autor">
+    <input [(ngModel)]="livro.titulo" type="text" class="form-control mt-2" placeholder="Titulo" name="titulo">
+    <input [(ngModel)]="livro.texto" type="text" class="form-control mt-2" placeholder="Texto" name="texto">
+    <div class="mt-3">
+      <button class="btn btn-success">Salvar Alteração</button>
+      <hr>
+      <button class="btn btn-warning text-white">Cancelar</button>
+    </div>
+  </form>
+</div>
