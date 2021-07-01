@@ -1,0 +1,20 @@
+<header>
+  <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom shadow-sm">
+    <div class="container">
+      <a class="navbar-brand">WebBookstore</a>
+      <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse d-sm-inline-flex flex-sm-row-reverse" [ngbCollapse]="isCollapsed">
+        <ul class="navbar-nav flex-grow-1">
+          <li class="nav-item" [routerLink]="['/dashboards']">
+            <a class="nav-link text-dark">Dashboards</a>
+          </li>
+          <li class="nav-item" [routerLink]="['/categorias/categoria-list']">
+            <a class="nav-link text-dark">Categorias</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

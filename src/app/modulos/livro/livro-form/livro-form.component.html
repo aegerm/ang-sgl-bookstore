@@ -1,0 +1,17 @@
+<div class="content">
+  <h5 class="mb-3 font-weight-500 text-center">Cadastrar Novo Livro</h5>
+  <hr>
+</div>
+
+<div class="div-custom">
+  <form (ngSubmit)="cadastrarLivro()" [formGroup]="livroForm">
+    <input type="text" id="inputNome" class="form-control mt-2" placeholder="Nome do Autor" formControlName="autor">
+    <input type="text" id="inputTitulo" class="form-control mt-2" placeholder="Titulo" formControlName="titulo">
+    <input type="text" id="inputTexto" class="form-control mt-2" placeholder="Texto" formControlName="texto">
+    <div class="mt-3">
+      <button class="btn btn-success">Cadastrar</button>
+      <hr>
+      <button class="btn btn-warning text-white" (click)="cancelar()">Cancelar</button>
+    </div>
+  </form>
+</div>

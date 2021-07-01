@@ -1,0 +1,24 @@
+<div class="default container">
+  <h5 class="card-title text-center">Listagem de Livros</h5>
+  <button class="btn btn-success btn-sm" (click)="criarNovoLivro()">Novo Livro</button>
+  <br>
+  <table class="table table-striped">
+    <thead>
+      <tr >
+        <th scope="col">Cod.</th>
+        <th scope="col">Titulo</th>
+        <th scope="col">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let livro of livros">
+        <td>{{ livro.id }}</td>
+        <td>{{ livro.titulo }}</td>
+        <td>
+          <a class="btn btn-link btn-sm mr-2 text-info">Editar</a>
+          <a class="btn btn-link btn-sm mr-2 text-danger">Deletar</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

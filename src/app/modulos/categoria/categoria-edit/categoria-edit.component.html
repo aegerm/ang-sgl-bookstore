@@ -1,0 +1,16 @@
+<div class="content">
+  <h5 class="mb-3 font-weight-500 text-center">Editar Categoria</h5>
+  <hr>
+</div>
+
+<div class="div-custom">
+  <form (ngSubmit)="atualizarCategoria()">
+    <input [(ngModel)]="categoria.nome" type="text" class="form-control mt-2" placeholder="Nome" name="nome">
+    <input [(ngModel)]="categoria.descricao" type="text" class="form-control mt-2" placeholder="Descrição" name="descricao">
+    <div class="mt-3">
+      <button class="btn btn-success">Salvar Alteração</button>
+      <hr>
+      <button class="btn btn-warning text-white" (click)="cancelar()">Cancelar</button>
+    </div>
+  </form>
+</div>

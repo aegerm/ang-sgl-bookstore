@@ -1,0 +1,15 @@
+<div class="content">
+  <h5 class="mb-3 font-weight-500 text-center text-danger">Deseja Deletar a Categoria?</h5>
+  <hr>
+</div>
+<div class="div-custom">
+  <form>
+    <input type="text" class="form-control mt-2" [(ngModel)]="categoria.nome" name="nome" disabled>
+    <input type="text" class="form-control mt-2" [(ngModel)]="categoria.descricao" name="descricao" disabled>
+    <div class="mt-3">
+      <button class="btn btn-danger" (click)="deletarCategoria()">Deletar</button>
+      <hr>
+      <button class="btn btn-warning text-white" (click)="cancelar()">Cancelar</button>
+    </div>
+  </form>
+</div>
