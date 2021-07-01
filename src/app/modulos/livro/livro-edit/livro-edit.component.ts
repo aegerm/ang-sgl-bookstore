@@ -40,4 +40,8 @@ export class LivroEditComponent implements OnInit {
       this.livro = res;
     });
   }
+
+  cancelar(): void {
+    this.router.navigate([`categorias/${this.categoriaId}/livros`]);
+  }
 }
