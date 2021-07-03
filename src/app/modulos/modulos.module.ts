@@ -15,6 +15,7 @@ import { LivroFormComponent } from './livro/livro-form/livro-form.component';
 import { LivroEditComponent } from './livro/livro-edit/livro-edit.component';
 import { LivroService } from './livro/services/livro.service';
 import { DashboardService } from './dashboards/services/dashboard.service';
+import { LivroDeleteComponent } from './livro/livro-delete/livro-delete.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { DashboardService } from './dashboards/services/dashboard.service';
     CategoriaEditComponent,
     LivroListComponent,
     LivroFormComponent,
-    LivroEditComponent
+    LivroEditComponent,
+    LivroDeleteComponent
   ],
   imports: [
     CommonModule,
@@ -43,7 +45,8 @@ import { DashboardService } from './dashboards/services/dashboard.service';
     CategoriaEditComponent,
     LivroListComponent,
     LivroFormComponent,
-    LivroEditComponent
+    LivroEditComponent,
+    LivroDeleteComponent
   ],
   providers: [
     CategoriaService,

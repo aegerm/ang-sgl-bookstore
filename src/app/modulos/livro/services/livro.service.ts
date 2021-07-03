@@ -32,4 +32,9 @@ export class LivroService {
     const url = `${this.baseUrl}/livros?categoria=${categoriaId}`;
     return this.http.post<Livro>(url, livro);
   }
+
+  deleteLivro(id: string): Observable<void> {
+    const url = `${this.baseUrl}/livros/${id}`;
+    return this.http.delete<void>(url);
+  }
 }
